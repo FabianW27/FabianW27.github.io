@@ -4,16 +4,35 @@
   box-sizing: border-box;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Dark color scheme */
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #243d66;
-        color: #ebedee;
-    }
+  body {
+      background-color: #243d66;
+      color: #ebedee;
   }
 
-  @media (prefers-color-scheme: light) {
-    body {
-        background-color: #c8c8c8;
-        color: #333;
-    }
+  .navbar a {
+    text-decoration: none;
+    color: #ebedee;
   }
+
+  /* Small devices like Phones */
+  @media only screen and (max-width: 600px) {
+
+  }
+}
+
+  /* Light color scheme */
+@media (prefers-color-scheme: light) {
+  body {
+       background-color: #c8c8c8;
+      color: #333;
+  }
+}
