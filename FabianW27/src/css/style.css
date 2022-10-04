@@ -2,37 +2,91 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
-/* Dark color scheme */
+/* ------ Dark color scheme ------ */
 @media (prefers-color-scheme: dark) {
   body {
       background-color: #243d66;
-      color: #ebedee;
   }
 
-  .navbar a {
+  header a {
     text-decoration: none;
     color: #ebedee;
   }
 
-  /* Small devices like Phones */
-  @media only screen and (max-width: 600px) {
+  header a:hover {
+    box-shadow: 0 2px 0 #ebedee;
+  }
 
+  .active {
+    box-shadow: 0 2px 0 #ebedee;
+  }
+
+  /* ------ Extra small devices: phones ------ */
+  @media only screen and (max-width: 600px) {
+    header {
+      margin: 0.7rem;
+    }
+
+    .name {
+      display: inline;
+    }
+
+    .navbar > ul {
+      display: none;
+    }
+
+    .navbar > ul > li {
+      list-style: none;
+    }
+
+    .hamburger {
+      position: fixed;
+    }
+
+    .bar {
+      display: block;
+      width: 25px;
+      height: 2px;
+      /* background-color: #6e61ca; */
+      background-color: #ebedee;
+      margin-bottom: 0.3rem;
+      border-radius: 5px;
+    }
+  }
+
+  /* ------ Large devices: laptops/desktops ------ */
+  @media only screen and (min-width: 992px) {
+    .navbar {
+      position: fixed;
+      width: 95%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .navbar > ul > li {
+      display: inline-block;
+      font-size: 1.4rem;
+      margin: 0.5rem;
+    }
   }
 }
 
-  /* Light color scheme */
+  /* ------ Light color scheme ------ */
 @media (prefers-color-scheme: light) {
   body {
        background-color: #c8c8c8;
       color: #333;
   }
+}
+hr {
+  /* height: 1rem; */
+  background-color: #ebedee;
+  margin-top: 5rem;
 }
