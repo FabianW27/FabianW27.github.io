@@ -1,0 +1,176 @@
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {...} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
+
+:root {
+    --primary-background-color: #FAF1E4;
+    --secondary-background-color: #435334;
+    --text-color: #CEDEBD;
+    --text-color2: #9EB384;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-background-color);
+    color: var(--secondary-background-color);
+    font-family: 'Raleway', sans-serif;
+}
+
+section {
+    height: 100vh;
+}
+
+#navbar {
+    background-color: var(--secondary-background-color);
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1.5rem;
+}
+
+#navbar li {
+    display: inline-block;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: none;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    /* gap 10 sah ganz vielversprechend aus */
+    gap: 7.5px;
+    /* border: 1px solid black; */
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: var(--primary-background-color);
+    display: block;
+    transition: .5s ease-in-out;
+    position: relative;
+}
+
+/* hamburger "animation" */
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg);
+    transform-origin: top left;
+  }
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+}
+
+/* sections */
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#home h1 {
+    font-size: 2.5rem;
+}
+
+#work {
+    background-color: var(--text-color2);
+    color: var(--primary-background-color);
+}
+
+#work h2 {
+    text-align: center;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
+    height: 10rem;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.social-icon-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4rem;
+}
+
+.social-icon-container a {
+    color: var(--text-color);
+}
+
+/* media queries */
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    /* body {
+        background-color: #333;
+    } */
+}
+
+/* Extra large devices (large laptops and desktops */
+@media only screen and (min-width: 1200px) {
+    .active {
+        background-color: var(--text-color2);
+    }
+
+    #navbar a {
+        display: inline-block;
+        font-size: 1.3rem;
+        padding: 1.4rem;
+    }
+
+    #navbar a:hover {
+        background-color: var(--text-color2);
+        color: var(--secondary-background-color);
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
