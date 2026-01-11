@@ -1,1 +1,1 @@
-## Visit (https://fabianw27.github.io/FabianW27/)
+## Visit https://fabianw27.github.io/FabianW27/
